@@ -3,11 +3,11 @@
 > [!TIP]
 > ### About Me 👋
 
-- 🔭 Name : Natt (Tien Nguyen).
-- 🌱 Addr : Hoa Tien - Hoa Vang - Da Nang.
+- 🔭 Name : Shin (Cao Nguyen Binh An).
+- 🌱 Addr : Hoa Xuan - Cam Le - Da Nang.
 - 👯 Contact:
-+ Phone : 0775500105
-+ Email : tien100609@donga.edu.vn
++ Phone : 0909090909
++ Email : an100277@donga.edu.vn
 
 > ### HAVE A NICE DAY !
 
@@ -16,15 +16,38 @@
 
 
 ## Today's Weather
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Update</title>
+</head>
+<body>
+
 <div align="center">
-
-`DaNang, Vietnam - 31/10/2024`
-
-<img src="https://cdn.weatherapi.com/weather/64x64/day/113.png"/>
-
-Sunny
-
+    <p id="date"></p>
+    <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon"/>
+    <p>Sunny</p>
 </div>
+
+<script>
+    // Tạo một đối tượng Date mới để lấy ngày hiện tại
+    const today = new Date();
+
+    // Các tùy chọn để định dạng ngày
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long', timeZone: 'Asia/Ho_Chi_Minh' };
+
+    // Chuyển đổi ngày thành định dạng mong muốn
+    const formattedDate = today.toLocaleDateString('vi-VN', options);
+    
+    // Hiển thị ngày trên trang web
+    document.getElementById('date').textContent = formattedDate;
+</script>
+
+</body>
+</html>
+
 
 
 <table>
