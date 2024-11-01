@@ -16,37 +16,28 @@
 
 
 ## Today's Weather
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Update</title>
-</head>
-<body>
-
 <div align="center">
-    <p id="date"></p>
-    <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon"/>
-    <p>Sunny</p>
+    DaNang, Vietnam - <span id="current-date"></span>
+    <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png"/>
+    Sunny
 </div>
 
 <script>
-    // Tạo một đối tượng Date mới để lấy ngày hiện tại
+    // Lấy ngày hiện tại
     const today = new Date();
 
-    // Các tùy chọn để định dạng ngày
-    const options = { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long', timeZone: 'Asia/Ho_Chi_Minh' };
+    // Lấy ngày, tháng, năm
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+    const year = today.getFullYear();
 
-    // Chuyển đổi ngày thành định dạng mong muốn
-    const formattedDate = today.toLocaleDateString('vi-VN', options);
+    // Định dạng ngày theo kiểu DD/MM/YYYY
+    const formattedDate = `${day}/${month}/${year}`;
     
-    // Hiển thị ngày trên trang web
-    document.getElementById('date').textContent = formattedDate;
+    // Hiển thị ngày trong span
+    document.getElementById('current-date').textContent = formattedDate;
 </script>
 
-</body>
-</html>
 
 
 
