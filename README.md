@@ -17,26 +17,14 @@
 
 ## Today's Weather
 <div align="center">
-    DaNang, Vietnam - <span id="current-date"></span>
-    <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png"/>
-    Sunny
+
+DaNang, Vietnam - 31/10/2024
+
+<img src="https://cdn.weatherapi.com/weather/64x64/day/113.png"/>
+
+Sunny
+
 </div>
-
-<script>
-    // Lấy ngày hiện tại
-    const today = new Date();
-
-    // Lấy ngày, tháng, năm
-    const day = String(today.getDate()).padStart(2, '0');
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
-    const year = today.getFullYear();
-
-    // Định dạng ngày theo kiểu DD/MM/YYYY
-    const formattedDate = `${day}/${month}/${year}`;
-    
-    // Hiển thị ngày trong span
-    document.getElementById('current-date').textContent = formattedDate;
-</script>
 
 
 
